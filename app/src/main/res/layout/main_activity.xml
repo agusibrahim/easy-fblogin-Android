@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/coordinatorLayout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fitsSystemWindows="true">
+
+	<android.support.design.widget.AppBarLayout
+		android:id="@+id/appBarLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<include
+			android:id="@+id/toolbar"
+			layout="@layout/toolbar"/>
+
+	</android.support.design.widget.AppBarLayout>
+
+	<android.support.v4.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior"
+		android:paddingLeft="10dp"
+		android:paddingTop="1dp"
+		android:paddingRight="10dp">
+
+		<LinearLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:orientation="vertical">
+
+			<Button
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:text="Login with Facebook"
+				android:id="@+id/loginbtn"
+				android:textColor="#FFFFFF"/>
+
+			<LinearLayout
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:id="@+id/fbinteract"
+				android:visibility="gone">
+
+				<com.loopj.android.image.SmartImageView
+					android:layout_height="50dp"
+					android:layout_width="wrap_content"
+					android:id="@+id/pp"/>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:id="@+id/txtname"
+					android:gravity="center"/>
+
+				<EditText
+					android:inputType="textMultiLine"
+					android:layout_width="match_parent"
+					android:ems="10"
+					android:layout_height="wrap_content"
+					android:lines="3"
+					android:id="@+id/postfield"
+					android:gravity="top"
+					android:hint="Post to Wall"/>
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="Post"
+					android:id="@+id/postbtn"
+					android:textColor="#FFFFFF"/>
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="Facebook Graph API"/>
+
+				<EditText
+					android:inputType="textMultiLine"
+					android:layout_width="match_parent"
+					android:ems="10"
+					android:layout_height="wrap_content"
+					android:lines="3"
+					android:hint="Query.."
+					android:gravity="top"
+					android:id="@+id/apiquery"
+					android:text="/me/feed"/>
+
+				<Button
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="Query"
+					android:id="@+id/getbtn"
+					android:textColor="#FFFFFF"/>
+
+			</LinearLayout>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:id="@+id/output"/>
+
+		</LinearLayout>
+
+	</android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
+
